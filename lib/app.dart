@@ -54,7 +54,9 @@ class _KnifeTossAppState extends ConsumerState<KnifeTossApp> {
     return MaterialApp(
       title: 'Knife Toss',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.dark,
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      themeMode: ThemeMode.system,
       locale: Locale(settings.locale),
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: const [

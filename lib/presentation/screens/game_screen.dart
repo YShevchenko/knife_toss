@@ -284,23 +284,25 @@ class _GameScreenState extends ConsumerState<GameScreen>
               Transform.translate(
                 offset: Offset(
                     _shakeOffset * sin(_bossGlowPhase * 20), 0),
-                child: CustomPaint(
-                  size: Size(constraints.maxWidth, constraints.maxHeight),
-                  painter: LogPainter(
-                    logAngle: game.log.angle,
-                    logRadius: _logRadius,
-                    stuckKnives: game.stuckKnives,
-                    isBoss: game.isBoss,
-                    bossGlowPhase: _bossGlowPhase,
+                child: RepaintBoundary(
+                  child: CustomPaint(
+                    size: Size(constraints.maxWidth, constraints.maxHeight),
+                    painter: LogPainter(
+                      logAngle: game.log.angle,
+                      logRadius: _logRadius,
+                      stuckKnives: game.stuckKnives,
+                      isBoss: game.isBoss,
+                      bossGlowPhase: _bossGlowPhase,
+                    ),
+                    foregroundPainter: _shouldShowKnife(game)
+                        ? KnifePainter(
+                            knifeY: _isFlying ? _throwY : _knifeStartY,
+                            logRadius: _logRadius,
+                            isFlying: _isFlying,
+                            trailOpacity: _trailOpacity,
+                          )
+                        : null,
                   ),
-                  foregroundPainter: _shouldShowKnife(game)
-                      ? KnifePainter(
-                          knifeY: _isFlying ? _throwY : _knifeStartY,
-                          logRadius: _logRadius,
-                          isFlying: _isFlying,
-                          trailOpacity: _trailOpacity,
-                        )
-                      : null,
                 ),
               ),
               // HUD

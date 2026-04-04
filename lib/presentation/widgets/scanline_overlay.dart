@@ -9,9 +9,11 @@ class ScanlineOverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IgnorePointer(
-      child: CustomPaint(
-        size: MediaQuery.of(context).size,
-        painter: _ScanlinePainter(opacity: opacity),
+      child: RepaintBoundary(
+        child: CustomPaint(
+          size: MediaQuery.of(context).size,
+          painter: _ScanlinePainter(opacity: opacity),
+        ),
       ),
     );
   }
