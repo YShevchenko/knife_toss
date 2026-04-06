@@ -211,11 +211,6 @@ class _GameScreenState extends ConsumerState<GameScreen>
       _showLevelComplete = true;
     });
 
-    // Show ad on level complete
-    final game = ref.read(gameProvider);
-    if (game != null) {
-      ref.read(adServiceProvider).showInterstitialIfReady(game.level);
-    }
   }
 
   void _advanceLevel() {

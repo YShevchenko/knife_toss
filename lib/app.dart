@@ -21,16 +21,10 @@ class _KnifeTossAppState extends ConsumerState<KnifeTossApp> {
     Future.microtask(() async {
       await ref.read(progressProvider.notifier).load();
 
-      // Wire IAP purchases -> stats + ads
-      final stats = ref.read(progressProvider);
-      if (stats.adsRemoved) {
-        ref.read(adServiceProvider).setAdsRemoved(true);
-      }
-
+      // Wire IAP purchases -> stats
       ref.read(iapServiceProvider).addListener((productId, success) {
         if (success && productId == 'knife_toss_remove_ads') {
           ref.read(progressProvider.notifier).setAdsRemoved(true);
-          ref.read(adServiceProvider).setAdsRemoved(true);
         }
       });
 

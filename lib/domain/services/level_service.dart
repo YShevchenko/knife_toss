@@ -62,12 +62,22 @@ class LevelService {
     }
   }
 
-  /// Generate pre-placed knives for boss levels.
-  List<Knife> generateBossKnives(int level) {
-    if (!isBossLevel(level)) return [];
+  /// Generate pre-placed knives for ALL levels (not just bosses).
+  List<Knife> generatePrePlacedKnives(int level) {
+    final tier = getTier(level);
+    final isBoss = isBossLevel(level);
 
-    final minKnives = AppConstants.bossPrePlacedKnives[0];
-    final maxKnives = AppConstants.bossPrePlacedKnives[1];
+    final int minKnives;
+    final int maxKnives;
+    if (isBoss) {
+      // Boss levels get extra pre-placed knives
+      minKnives = AppConstants.bossPrePlacedKnives[0] + tier;
+      maxKnives = AppConstants.bossPrePlacedKnives[1] + tier;
+    } else {
+      final range = AppConstants.prePlacedPerTier[tier];
+      minKnives = range[0];
+      maxKnives = range[1];
+    }
     final count = minKnives + _rng.nextInt(maxKnives - minKnives + 1);
 
     final knives = <Knife>[];
@@ -91,7 +101,7 @@ class LevelService {
     final speed = getRotationSpeed(level);
     final pattern = getPattern(level);
     final knifeCount = getKnifeCount(level);
-    final bossKnives = generateBossKnives(level);
+    final preKnives = generatePrePlacedKnives(level);
 
     return GameState(
       level: level,
@@ -102,7 +112,7 @@ class LevelService {
         isBoss: isBoss,
         pattern: pattern,
       ),
-      stuckKnives: bossKnives,
+      stuckKnives: preKnives,
       knivesToThrow: knifeCount,
       currentKnifeId: 1,
     );

@@ -10,96 +10,96 @@ class AppLocalizationsUk extends AppLocalizations {
   String get appTitle => 'Knife Toss';
 
   @override
-  String get play => 'Graty';
+  String get play => 'Грати';
 
   @override
-  String get level => 'Riven';
+  String get level => 'Рівень';
 
   @override
-  String get score => 'Ochky';
+  String get score => 'Очки';
 
   @override
-  String get knives => 'Nozhi';
+  String get knives => 'Ножі';
 
   @override
-  String get settings => 'Nalashtuvannia';
+  String get settings => 'Налаштування';
 
   @override
-  String get shop => 'Mahazyn';
+  String get shop => 'Магазин';
 
   @override
-  String get gameOver => 'Hra zakincena';
+  String get gameOver => 'Гра закінчена';
 
   @override
-  String get levelComplete => 'Riven proydeno!';
+  String get levelComplete => 'Рівень пройдено!';
 
   @override
-  String get bossDefeated => 'Bosa peremozheno!';
+  String get bossDefeated => 'Боса переможено!';
 
   @override
-  String get retry => 'Sprobuvaty znovu';
+  String get retry => 'Спробувати знову';
 
   @override
-  String get menu => 'Meniu';
+  String get menu => 'Меню';
 
   @override
-  String get newBest => 'Novyi rekord!';
+  String get newBest => 'Новий рекорд!';
 
   @override
-  String get tapToContinue => 'Torknit shchob prodovzhyty';
+  String get tapToContinue => 'Торкніться, щоб продовжити';
 
   @override
-  String get bestScore => 'Krashchyi rezultat';
+  String get bestScore => 'Кращий результат';
 
   @override
-  String get highestLevel => 'Krashchyi riven';
+  String get highestLevel => 'Кращий рівень';
 
   @override
-  String get totalPlayTime => 'Chas hry';
+  String get totalPlayTime => 'Час гри';
 
   @override
-  String get levelsCompleted => 'Zaverseno';
+  String get levelsCompleted => 'Завершено';
 
   @override
-  String get soundEffects => 'Zvukovi efekty';
+  String get soundEffects => 'Звукові ефекти';
 
   @override
-  String get hapticFeedback => 'Haptychnyi zvorotnii zviazok';
+  String get hapticFeedback => 'Гаптичний зворотний зв\'язок';
 
   @override
-  String get language => 'Mova';
+  String get language => 'Мова';
 
   @override
-  String get preferences => 'Parametry';
+  String get preferences => 'Параметри';
 
   @override
-  String get purchases => 'Pokupky';
+  String get purchases => 'Покупки';
 
   @override
-  String get store => 'Mahazyn';
+  String get store => 'Магазин';
 
   @override
-  String get purchased => 'Kuplieno';
+  String get purchased => 'Куплено';
 
   @override
-  String get removeAds => 'Vydalyty reklamu';
+  String get removeAds => 'Видалити рекламу';
 
   @override
   String get removeAdsDescription =>
-      'Vydalyty vsiu reklamu mizh rivniamy.';
+      'Видалити всю рекламу між рівнями.';
 
   @override
-  String get restore => 'Vidnovyty pokupky';
+  String get restore => 'Відновити покупки';
 
   @override
-  String get back => 'Nazad';
+  String get back => 'Назад';
 
   @override
-  String get totalScore => 'Zahalni ochky';
+  String get totalScore => 'Загальні очки';
 
   @override
-  String get totalKnives => 'Zahalni nozhi';
+  String get totalKnives => 'Загальні ножі';
 
   @override
-  String get bossesDefeated => 'Bosiv peremozheno';
+  String get bossesDefeated => 'Босів переможено';
 }

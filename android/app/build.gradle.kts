@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "top.heldig.knife_toss"
+    namespace = "com.heldiglab.knifetoss"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "top.heldig.knife_toss"
+        applicationId = "com.heldiglab.knifetoss"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

@@ -5,7 +5,6 @@ import '../../data/repositories/prefs_progress_repository.dart';
 import '../../domain/models/game_state.dart';
 import '../../domain/models/player_stats.dart';
 import '../../domain/repositories/progress_repository.dart';
-import '../../services/ad_service.dart';
 import '../../services/audio_service.dart';
 import '../../services/iap_service.dart';
 import 'game_notifier.dart';
@@ -29,10 +28,6 @@ final progressRepoProvider = Provider<ProgressRepository>((ref) {
 });
 
 // -- Services --
-
-final adServiceProvider = Provider<AdServiceBase>((_) {
-  return AdService();
-});
 
 final iapServiceProvider = Provider<IAPServiceBase>((_) {
   return IAPService();

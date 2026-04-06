@@ -1,4 +1,4 @@
-package top.heldig.knife_toss
+package com.heldiglab.knifetoss
 
 import io.flutter.embedding.android.FlutterActivity
 

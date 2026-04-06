@@ -31,25 +31,25 @@ class AppLocalizationsEs extends AppLocalizations {
   String get gameOver => 'Fin del juego';
 
   @override
-  String get levelComplete => 'Nivel completado!';
+  String get levelComplete => '¡Nivel completado!';
 
   @override
-  String get bossDefeated => 'Jefe derrotado!';
+  String get bossDefeated => '¡Jefe derrotado!';
 
   @override
   String get retry => 'Reintentar';
 
   @override
-  String get menu => 'Menu';
+  String get menu => 'Menú';
 
   @override
-  String get newBest => 'Nuevo record!';
+  String get newBest => '¡Nuevo récord!';
 
   @override
   String get tapToContinue => 'Toca para continuar';
 
   @override
-  String get bestScore => 'Mejor puntuacion';
+  String get bestScore => 'Mejor puntuación';
 
   @override
   String get highestLevel => 'Mejor nivel';
@@ -64,7 +64,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get soundEffects => 'Efectos de sonido';
 
   @override
-  String get hapticFeedback => 'Vibracion haptica';
+  String get hapticFeedback => 'Vibración háptica';
 
   @override
   String get language => 'Idioma';
@@ -92,7 +92,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get restore => 'Restaurar compras';
 
   @override
-  String get back => 'Atras';
+  String get back => 'Atrás';
 
   @override
   String get totalScore => 'Puntos totales';

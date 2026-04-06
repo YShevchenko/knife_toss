@@ -8,7 +8,7 @@ abstract final class AppConstants {
   static const double logRadiusFraction = 0.15;
 
   /// Knife angular width in radians for collision detection.
-  static const double knifeAngularWidth = 0.15;
+  static const double knifeAngularWidth = 0.25;
 
   /// Knife blade length as fraction of log radius.
   static const double knifeBladeRatio = 0.55;
@@ -33,7 +33,7 @@ abstract final class AppConstants {
   // -- Rotation --
 
   /// Base rotation speed in radians per second.
-  static const double baseRotationSpeed = 1.2;
+  static const double baseRotationSpeed = 2.0;
 
   // -- Difficulty --
 
@@ -44,18 +44,26 @@ abstract final class AppConstants {
 
   /// Knives to throw per tier [min, max].
   static const List<List<int>> knivesPerTier = [
-    [4, 6], // tier 1: levels 1-5
-    [6, 8], // tier 2: levels 6-10
-    [8, 10], // tier 3: levels 11-20
-    [10, 12], // tier 4: levels 21+
+    [5, 7], // tier 1: levels 1-5
+    [7, 9], // tier 2: levels 6-10
+    [9, 12], // tier 3: levels 11-20
+    [12, 15], // tier 4: levels 21+
   ];
 
   /// Rotation speed multipliers per tier.
   static const List<double> speedMultipliers = [
-    0.6, // tier 1: slow
-    1.0, // tier 2: medium
-    1.4, // tier 3: fast
-    1.8, // tier 4: very fast
+    0.8, // tier 1: medium
+    1.2, // tier 2: fast
+    1.6, // tier 3: very fast
+    2.2, // tier 4: extreme
+  ];
+
+  /// Pre-placed knives per tier for normal levels [min, max].
+  static const List<List<int>> prePlacedPerTier = [
+    [2, 3], // tier 1: start with 2-3 knives already in log
+    [3, 5], // tier 2
+    [4, 6], // tier 3
+    [5, 8], // tier 4
   ];
 
   /// Boss level frequency.

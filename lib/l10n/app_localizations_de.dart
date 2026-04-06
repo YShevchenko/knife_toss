@@ -40,7 +40,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get retry => 'Nochmal';
 
   @override
-  String get menu => 'Menue';
+  String get menu => 'Menü';
 
   @override
   String get newBest => 'Neuer Rekord!';
@@ -73,7 +73,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get preferences => 'Einstellungen';
 
   @override
-  String get purchases => 'Kaeufe';
+  String get purchases => 'Käufe';
 
   @override
   String get store => 'Shop';
@@ -89,10 +89,10 @@ class AppLocalizationsDe extends AppLocalizations {
       'Alle Werbung zwischen den Leveln entfernen.';
 
   @override
-  String get restore => 'Kaeufe wiederherstellen';
+  String get restore => 'Käufe wiederherstellen';
 
   @override
-  String get back => 'Zurueck';
+  String get back => 'Zurück';
 
   @override
   String get totalScore => 'Gesamtpunkte';
